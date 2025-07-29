@@ -9,6 +9,7 @@ def test_ctc_button_schedule_demo_call_tracking(driver):
     mp = MainPage(driver)
     mp.do_click(mp.PRODUCTS_LINK)
     mp.do_click(mp.INSIGHT_CALL_TRACKING)
+    mp.zoom_control(75)
     ct = CallTracking(driver)
     ct.click_schedule_demo()
     assert ct.is_calender_displayed(), "Calendar is not displayed after clicking Schedule Demo button"
@@ -22,9 +23,9 @@ def test_ctc_button_request_demo_call_tracking(driver):
     time.sleep(2)
     ct.scroll(3500)
     ct.close_windows_popup()
-    ct.scroll(2400)
+    ct.scroll(2200)
     time.sleep(2)
-    ct.click_request_demo()
+    ct.js_click(ct.REQUEST_DEMO_BUTTON)
     assert ct.is_calender_displayed(), "Calendar is not displayed after clicking Request Demo button"
 
 def test_ctc_button_subscribe_call_tracking(driver):
@@ -36,7 +37,7 @@ def test_ctc_button_subscribe_call_tracking(driver):
     time.sleep(2)
     ct.scroll(3500)
     ct.close_windows_popup()
-    ct.scroll(3900)
+    ct.scroll(3500)
     time.sleep(2)
     ct.write(ct.SUBSCRIBE_EMAIL,"Automation@gmail.com")
     ct.click_subscribe()

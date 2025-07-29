@@ -2,7 +2,6 @@ import time
 from pages.main_page import MainPage
 from pages.real_time_bidding_page import RealTimeBidding
 
-
 def test_ctc_button_schedule_demo_real_time_bidding(driver):
     driver = driver
     mp = MainPage(driver)

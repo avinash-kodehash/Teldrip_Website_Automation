@@ -12,6 +12,14 @@ class VirtualNumber(BasePage):
     WINDOWS_POPUP = (By.XPATH, "//button[@class='close--popup']")
     SUBSCRIBE_POPUP = (By.XPATH, "//div[@role='alert']")
     SEE_HOW_CONNECT_WORKS = (By.XPATH, "//a[normalize-space()='See How Teldrip Connect Works']")
+    INDIA = (By.XPATH,"//a[normalize-space()='India']")
+    USA = (By.XPATH,"//a[normalize-space()='US']")
+    UAE = (By.XPATH,"//a[normalize-space()='UAE']")
+    GERMANY = (By.XPATH,"//a[normalize-space()='Germany']")
+    CANADA = (By.XPATH,"//a[normalize-space()='Canada']")
+    AUSTRALIA = (By.XPATH,"//a[normalize-space()='Australia']")
+    UK = (By.XPATH,"//a[normalize-space()='UK']")
+
 
     def __init__(self, driver):
         super().__init__(driver)

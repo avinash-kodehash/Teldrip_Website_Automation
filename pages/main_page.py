@@ -22,6 +22,7 @@ class MainPage(BasePage):
     SUBSCRIBE_EMAIL = (By.XPATH,"//input[@placeholder='Enter your email']")
     #Products
     PRODUCTS_LINK = (By.XPATH,"(//a[normalize-space()='Products'])[1]")
+    INDUSTRIES_LINK = (By.XPATH,"(//a[normalize-space()='Industries'])[1]")
     INSIGHTS = (By.XPATH,"//div[@class='insight']/a[@href='/insights']")
     CONNECT = (By.XPATH,"//div[@class='insight']/a[@href='/connect']")
     INSIGHT_CALL_TRACKING = (By.XPATH,"//div[@class='articleloop']/a[@href='/call-tracking-software']")
@@ -36,6 +37,14 @@ class MainPage(BasePage):
     CONNECT_CAMPAIGN = (By.XPATH,"//h5[normalize-space()='Campaigns']")
     CONNECT_VIRTUAL_PHONE_NUMBER = (By.XPATH,"//h5[normalize-space()='Virtual Phone Number']")
     CONNECT_WORKFORCE_MANAGEMENT = (By.XPATH,"//h5[normalize-space()='Workforce Management']")
+    INDUSTRY_MARKETING_AGENCY = (By.XPATH,"//div[@class='articleloop']/a[@href='/industry/marketing-agencies']")
+    INDUSTRY_AUTOMOTIVE = (By.XPATH,"//div[@class='articleloop']/a[@href='/industry/automotive']")
+    INDUSTRY_LEGAL_SERVICES = (By.XPATH,"//a[@href='/industry/legal-services']")
+    INDUSTRY_FINANCIAL_SERVICES = (By.XPATH,"//a[@href='/industry/financial-services']")
+    INDUSTRY_HEALTHCARE_SERVICES = (By.XPATH,"//a[@href='/industry/healthcare-services']")
+    INDUSTRY_TELECOM = (By.XPATH,"//a[@href='/industry/telecom']")
+    INDUSTRY_SALES = (By.XPATH,"//a[@href='/industry/sales']")
+    INDUSTRY_TRAVEL_HOSPITALITY = (By.XPATH,"//a[@href='/industry/travel-hospitality']")
 
     def __init__(self, driver):
         super().__init__(driver)

@@ -20,21 +20,21 @@ def test_ctc_button_request_demo_call_reporting(driver):
     driver = driver
     mp = MainPage(driver)
     mp.do_click(mp.PRODUCTS_LINK)
-    mp.do_click(mp.INSIGHT_CALL_TRACKING)
+    mp.do_click(mp.INSIGHT_CALL_REPORTING)
     cr = CallReporting(driver)
     time.sleep(2)
     cr.scroll(3500)
     cr.close_windows_popup()
-    cr.scroll(2400)
+    cr.scroll(2200)
     time.sleep(2)
-    cr.click_request_demo()
+    cr.js_click(cr.REQUEST_DEMO_BUTTON)
     assert cr.is_calender_displayed(), "Calendar is not displayed after clicking Request Demo button"
 
 def test_ctc_button_subscribe_call_reporting(driver):
     driver = driver
     mp = MainPage(driver)
     mp.do_click(mp.PRODUCTS_LINK)
-    mp.do_click(mp.INSIGHT_CALL_TRACKING)
+    mp.do_click(mp.INSIGHT_CALL_REPORTING)
     cr = CallReporting(driver)
     time.sleep(2)
     cr.scroll(3500)

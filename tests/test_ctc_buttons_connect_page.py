@@ -19,6 +19,7 @@ def test_ctc_button_schedule_demo_connect(driver):
     cp = ConnectPage(driver)
     time.sleep(2)
     cp.scroll(300)
+    time.sleep(2)
     cp.click_schedule_demo()
     assert cp.is_calender_displayed(), "Calendar is not displayed after clicking Schedule Demo button"
 

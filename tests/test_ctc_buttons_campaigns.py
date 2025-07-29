@@ -1,5 +1,4 @@
 import time
-
 from pages.connect_campaign_page import Campaign
 from pages.main_page import MainPage
 

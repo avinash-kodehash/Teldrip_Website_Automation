@@ -27,7 +27,7 @@ def test_ctc_button_request_demo_payout_management(driver):
     pm.close_windows_popup()
     pm.scroll(800)
     time.sleep(2)
-    pm.click_request_demo()
+    pm.js_click(pm.REQUEST_DEMO_BUTTON)
     assert pm.is_calender_displayed(), "Calendar is not displayed after clicking Request Demo button"
 
 def test_ctc_button_subscribe_payout_management(driver):

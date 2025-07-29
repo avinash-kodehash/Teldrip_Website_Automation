@@ -25,10 +25,10 @@ def test_ctc_button_see_pricing(driver):
 def test_contact_us_form(driver):
     driver = driver
     mp = MainPage(driver)
-    mp.scroll(6000)
+    mp.scroll(6100)
     time.sleep(2)
     mp.close_windows_popup()
-    mp.scroll(2250)
+    mp.scroll(2000)
     time.sleep(2)
     mp.fill_contact_info("John", "Doe", "abc@example.com", "2125551234","This is a test message.")
     mp.click_submit()
@@ -37,7 +37,7 @@ def test_contact_us_form(driver):
 def test_subscribe_button(driver):
     driver = driver
     mp = MainPage(driver)
-    mp.scroll(6000)
+    mp.scroll(6200)
     time.sleep(2)
     mp.close_windows_popup()
     mp.scroll(3500)

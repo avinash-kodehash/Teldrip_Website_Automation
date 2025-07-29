@@ -42,7 +42,7 @@ def test_ctc_button_see_how_connect_works_call_management(driver):
     cm.close_windows_popup()
     cm.scroll(300)
     time.sleep(2)
-    cm.do_click(cm.SEE_HOW_CONNECT_WORKS)
+    cm.js_click(cm.SEE_HOW_CONNECT_WORKS)
     time.sleep(2)
     assert cm.driver.current_url == "https://teldrip.com/contact"
 
