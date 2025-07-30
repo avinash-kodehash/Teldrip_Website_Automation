@@ -7,7 +7,7 @@ from selenium import webdriver
 def create_screenshot_dir():
     os.makedirs("screenshots", exist_ok=True)
 
-@pytest.fixture(scope="function")
+@pytest.fixture(scope="class")
 def driver():
     driver = webdriver.Chrome()
     driver.get("https://teldrip.com/")
