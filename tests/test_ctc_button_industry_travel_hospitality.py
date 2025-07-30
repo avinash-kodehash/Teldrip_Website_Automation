@@ -1,5 +1,5 @@
 import time
-from pages.industry_sales_page import Sales
+from pages.industry_travel_hospitality_page import TravelHospitality
 from pages.main_page import MainPage
 
 def test_ctc_button_book_demo_button(driver):
@@ -8,15 +8,15 @@ def test_ctc_button_book_demo_button(driver):
     mp.do_click(mp.INDUSTRIES_LINK)
     time.sleep(2)
     mp.zoom_control(75)
-    mp.do_click(mp.INDUSTRY_SALES)
+    mp.do_click(mp.INDUSTRY_TRAVEL_HOSPITALITY)
     #time.sleep(2)
-    s = Sales(driver)
+    th = TravelHospitality(driver)
     #ma.scroll(3600)
     #ma.close_windows_popup()
     #ma.scroll(300)
     #time.sleep(2)
-    s.js_click(s.BOOK_DEMO_BUTTON)
-    assert s.is_calender_displayed(), "Calendar is not displayed after clicking Request Demo button"
+    th.js_click(th.BOOK_DEMO_BUTTON)
+    assert th.is_calender_displayed(), "Calendar is not displayed after clicking Request Demo button"
 
 def test_ctc_button_get_in_touch_button(driver):
     driver = driver
@@ -24,12 +24,12 @@ def test_ctc_button_get_in_touch_button(driver):
     mp.do_click(mp.INDUSTRIES_LINK)
     time.sleep(2)
     mp.zoom_control(75)
-    mp.do_click(mp.INDUSTRY_SALES)
+    mp.do_click(mp.INDUSTRY_TRAVEL_HOSPITALITY)
     time.sleep(2)
     mp.scroll(3100)
     mp.close_windows_popup()
     time.sleep(2)
-    s = Sales(driver)
-    s.js_click(s.GET_IN_TOUCH_BUTTON)
+    th = TravelHospitality(driver)
+    th.js_click(th.GET_IN_TOUCH_BUTTON)
     time.sleep(2)
     assert "https://teldrip.com/contact" in driver.current_url, "Get in Touch button did not redirect to the correct URL"
