@@ -39,6 +39,7 @@ def test_ctc_button_booknow(driver):
     driver = driver
     mp = MainPage(driver)
     mp.do_click(mp.PRODUCTS_LINK)
+    time.sleep(2)
     mp.do_click(mp.CONNECT)
     cp = ConnectPage(driver)
     time.sleep(2)

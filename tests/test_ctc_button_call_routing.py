@@ -38,7 +38,7 @@ def test_ctc_button_subscribe_call_routing(driver):
     cr = CallRouting(driver)
     cr.scroll(3000)
     cr.close_windows_popup()
-    cr.scroll(1500)
+    cr.scroll_to_element(cr.SUBSCRIBE_EMAIL)
     time.sleep(2)
     cr.write(cr.SUBSCRIBE_EMAIL,"Automation@gmail.com")
     cr.click_subscribe()

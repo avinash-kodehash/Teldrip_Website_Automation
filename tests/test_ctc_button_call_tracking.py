@@ -8,6 +8,7 @@ def test_ctc_button_schedule_demo_call_tracking(driver):
     driver = driver
     mp = MainPage(driver)
     mp.do_click(mp.PRODUCTS_LINK)
+    time.sleep(2)
     mp.do_click(mp.INSIGHT_CALL_TRACKING)
     mp.zoom_control(75)
     ct = CallTracking(driver)
@@ -37,7 +38,7 @@ def test_ctc_button_subscribe_call_tracking(driver):
     time.sleep(2)
     ct.scroll(3500)
     ct.close_windows_popup()
-    ct.scroll(3500)
+    ct.scroll_to_element(ct.SUBSCRIBE_EMAIL)
     time.sleep(2)
     ct.write(ct.SUBSCRIBE_EMAIL,"Automation@gmail.com")
     ct.click_subscribe()
